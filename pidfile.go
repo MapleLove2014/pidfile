@@ -51,6 +51,10 @@ func (file PIDFile) Remove() error {
 	return os.Remove(file.path)
 }
 
+func (file PIDFile) String() string {
+	return fmt.Sprintf("%s:%d", file.path, file.pid)
+}
+
 // Read the PIDFile content.
 func (file PIDFile) Content() (int, error) {
 	if contents, err := ioutil.ReadFile(file.path); err != nil {
