@@ -1,4 +1,4 @@
-module github.com/dekobon/pidfile
+module github.com/MapleLove2014/pidfile
 
 go 1.12
 
